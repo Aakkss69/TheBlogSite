@@ -15,7 +15,6 @@ require("dotenv").config();
 const password = process.env.MONGODB_PASSWORD;
 url = url + password + "@cluster0.4fk5puh.mongodb.net/blogPostDB";
 //localhost:27017/populationDB
-mongodb: readFileSyncExample();
 mongoose.connect(url, {
   useNewUrlParser: true,
 });
