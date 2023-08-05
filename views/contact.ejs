@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <%- include('partials/header') %>
+
+  <div class="container">
+    <h1>Contact</h1>
+    <% const detailsArray = Content.split(', '); detailsArray.forEach(detail =>
+    { %> <% if (detail.includes('@')) { %>
+    <p>
+      <a href="mailto:<%= detail.replace('Email: ', '') %>"><%= detail %></a>
+    </p>
+    <% } else if (detail.includes('+91-')) { %>
+    <p><a href="tel:<%= detail.replace('Number: ', '') %>"><%= detail %></a></p>
+    <% } else { %>
+    <p><%= detail %></p>
+    <% } %> <% }) %>
+  </div>
+
+  <%- include('partials/footer') %>
+</html>

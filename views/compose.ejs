@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <%- include('partials/header') %>
+
+  <div class="container">
+    <h1>Compose</h1>
+    <form action="/compose" method="post">
+      <div class="form-group">
+        <label for="messageInputTitle">Title:</label>
+        <input
+          type="text"
+          id="messageInputTitle"
+          class="form-control"
+          placeholder="Type your title here"
+          name="form_input_title"
+          autocomplete="off"
+          autocapitalize="off"
+        />
+      </div>
+      <div class="form-group">
+        <label for="messageInputPost">Post:</label>
+        <textarea
+          id="messageInputPost"
+          class="form-control"
+          placeholder="Type your post here"
+          name="form_input_post"
+          rows="4"
+          autocomplete="off"
+          autocapitalize="off"
+        ></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary" name="submitButton">
+        Publish
+      </button>
+    </form>
+  </div>
+
+  <%- include('partials/footer') %>
+</html>

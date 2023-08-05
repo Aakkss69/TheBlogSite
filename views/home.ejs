@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <%- include('partials/header') %>
+
+  <div class="container">
+    <h1>Home Page</h1>
+    <p><%= Content %></p>
+  </div>
+
+  <!-- prettier-ignore-start -->
+  <div class="container">
+    <% postsArray.forEach((postObject) => { %>
+    <div class="post">
+      <!-- prettier-ignore-->
+      <h1><%= postObject.postTitle %></h1>
+      <!-- prettier-ignore-->
+      <% const maxLength = 100; %>
+      <!-- prettier-ignore-->
+      <% const truncatedPost = postObject.postContent.length > maxLength ? postObject.postContent.slice(0, maxLength) + "..." : postObject.postContent; %>
+      <!-- prettier-ignore-->
+      <% const link = "/posts/" + postObject.postTitle; %>
+      <!-- prettier-ignore-->
+      <p><%= truncatedPost %> <a href="<%= link %>">Read more</a></p>
+    </div>
+
+    <% }) %>
+  </div>
+  <!-- prettier-ignore-end -->
+
+  <%- include('partials/footer') %>
+</html>

@@ -1,0 +1,50 @@
+/* Color Scheme: 1A120B 3C2A21 D5CEA3 E5E5CB */
+
+/* .container-fluid */
+.container-fluid {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+/* .navbar */
+.navbar {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: 0;
+  border-radius: 0;
+  margin-bottom: 0;
+  font-size: 12px;
+  letter-spacing: 5px;
+  background-color: #1a120b; /* Set background color to 1A120B */
+  color: #ffffff; /* Set font color to white */
+  font-weight: bold; /* Set the font weight to bold */
+}
+
+/* .navbar-nav li a:hover */
+.navbar-nav li a:hover {
+  color: #3c2a21 !important; /* Set hover color to 3C2A21 */
+}
+
+/* .footer-padding */
+.footer-padding {
+  padding-bottom: 60px;
+}
+
+/* .footer */
+.footer {
+  text-align: center;
+  width: 100%;
+  height: 60px;
+  background-color: #d5cea3; /* Set background color to D5CEA3 */
+  position: fixed; /* Set the position to fixed */
+  bottom: 0; /* Stick the footer to the bottom of the viewport */
+  display: flex; /* Use flexbox layout */
+  align-items: center; /* Center the content vertically */
+}
+
+/* .footer p */
+.footer p {
+  font-size: 18px;
+  color: #000000; /* Set font color to black */
+  margin: 0 auto; /* Center the text horizontally within the footer */
+}
